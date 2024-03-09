@@ -36,8 +36,11 @@
               <h2>¿Primera vez en WebClínica? Por favor regístrese para acceder a nuestros servicios.</h2>
             </div>
             <!-- Aquí va el FORM ACTION, es la ACCION del formulario al LOGUEARSE -->
-            <form class="roboto400" action="./error404.html">
+            <form class="roboto400" action="../pages/error404.html">
               <!-- En este caso lo redireccionamos a un ERROR404 (momentaneamente) -->
+
+
+              <!-- INGRESE SU NOMBRE COMPLETO -->
               <div class="my-4">
                 <label for="exampleModalLabel" class="form-label text-white textosombra">Nombre Completo </label>
                 <input
@@ -51,6 +54,7 @@
                 />
               </div>
 
+              <!-- INGRESA TU AÑO DE NACIMIENTO -->
               <div class="my-4">
                 <label for="exampleModalLabel" class="form-label text-white textosombra">Año de Nacimiento </label>
                 <input
@@ -64,6 +68,7 @@
                 />
               </div>
 
+              <!-- INGRESA TU EMAIL -->
               <div class="my-4">
                 <label for="exampleInputEmail1" class="form-label text-white textosombra">Email </label>
                 <input
@@ -79,13 +84,15 @@
                 <div id="emailHelp" class="form-text text-white">Nunca compartiremos tu email con terceros.</div>
               </div>
 
-              <!-- INICIA NUEVO  MODELO DE CONTRASEÑA -->
+              <!-- INICIA NUEVO  MODELO DE PASSWORD -->
               <div class="row g-3 align-items-center">
                 <div class="col-auto">
                   <label for="inputPassword6" class="col-form-label text-white textosombra">Contraseña</label>
                 </div>
                 <div class="col-auto">
-                  <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                  <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Contraseña" required
+                  minlength="8"
+                  maxlength="22">
                 </div>
                 <div class="col-auto">
                   <span id="passwordHelpInline" class="form-text text-white textosombras">
@@ -96,6 +103,7 @@
               <!-- FIN DEL NUEVO MODELO -->
 
 
+              <!-- CODIGO TRADICIONAL DE PASSWORD -->
               <div class="my-4">
                 <label for="exampleInputPassword1" class="form-label text-white textosombra">Contraseña</label>
                 <input
@@ -106,8 +114,10 @@
                   required
                   minlength="8"
                   maxlength="22"
+                  />
               </div>
 
+              <!-- SELECCIONA TU GENERO -->
               <div class="my-4">
                 <label for="genero" class="form-label text-white textosombra">Género</label>
                 <div class="form-check">
@@ -122,6 +132,7 @@
                 </div>
               </div>
 
+              <!-- INGRESE SU OBRA SOCIAL -->
               <div class="my-4">
                 <label for="exampleModalLabel" class="form-label text-white textosombra">Obra Social </label>
                 <input
@@ -130,7 +141,7 @@
                   placeholder="Ingrese su Obra Social"
                   id="exampleNombreCompleto"
                   required
-                  minlength="5"
+                  minlength="4"
                   maxlength="48"
                 />
               </div>
