@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Pacientes</title>
-    <link rel="stylesheet" href="../css/RegistroPacientes.css">
-    <link rel="stylesheet" href="../pages/error404.html">
+    <title>Registro Médico</title>
+    <link rel="stylesheet" href="../css_login_reg/registroMedico.css">
+    <link rel="stylesheet" href="#">
 
     <!-- Link de BOOTSTRAP -->
 
@@ -33,10 +33,10 @@
           <!-- INICIA FORMULARIO -->
           <div class="col-xl-7 py-3 fonditogris centrador">
             <div class="text-white d-flex text-align-center">
-              <h2>¿Primera vez en WebClínica? Por favor regístrese para acceder a nuestros servicios.</h2>
+              <h2>¿Deseas trabajar en Webclinica? Por favor regístrese para acceder a una evaluación exahustiva.</h2>
             </div>
             <!-- Aquí va el FORM ACTION, es la ACCION del formulario al LOGUEARSE -->
-            <form class="roboto400" action="../pages/error404.html">
+            <form class="roboto400" action="#">
               <!-- En este caso lo redireccionamos a un ERROR404 (momentaneamente) -->
 
 
@@ -54,17 +54,31 @@
                 />
               </div>
 
-              <!-- INGRESA TU AÑO DE NACIMIENTO -->
+              <!-- INGRESA TU ESPECIALIDAD -->
               <div class="my-4">
-                <label for="exampleModalLabel" class="form-label text-white textosombra">Año de Nacimiento </label>
+                <label for="exampleModalLabel" class="form-label text-white textosombra"> Especialidad </label>
                 <input
-                  type="date"
+                  type="text"
                   class="form-control"
-                  placeholder="Ingrese el año de su nacimiento"
-                  id="exampleNacimiento"
+                  placeholder="Ingrese su Especialidad"
+                  id="exampleEspecialidad"
                   required
-                  minlength="4"
-                  maxlength="5"
+                  minlength="5"
+                  maxlength="48"
+                />
+              </div>
+
+              <!-- DIA Y HORARIO DE ATENCIÓN -->
+              <div class="my-4">
+                <label for="exampleModalLabel" class="form-label text-white textosombra"> Días y horarios de Atención. </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Ingrese sus días y horarios de atención."
+                  id="exampleHorario"
+                  required
+                  minlength="5"
+                  maxlength="48"
                 />
               </div>
 
@@ -117,36 +131,22 @@
                   />
               </div>
 
-              <!-- SELECCIONA TU GENERO -->
+              <!-- ROL DEL MEDICO -->
               <div class="my-4">
-                <label for="genero" class="form-label text-white textosombra">Género</label>
+                <label for="rol" class="form-label text-white textosombra">Rol Médico</label>
                 <div class="form-check">
-                  <input type="radio" class="form-check-input radioBoton" id="masculino" name="genero" value="masculino" required>
-                  <label for="masculino" class="form-check-label text-white">Masculino</label>
+                  <input type="radio" class="form-check-input radioBoton" id="consultorio" name="genero" value="masculino" required>
+                  <label for="masculino" class="form-check-label text-white">Atención en Consultorio</label>
                   <br>
-                  <input type="radio" class="form-check-input radioBoton" id="femenino" name="genero" value="femenino" required>
-                  <label for="femenino" class="form-check-label text-white">Femenino</label>
+                  <input type="radio" class="form-check-input radioBoton" id="cirugia" name="genero" value="femenino" required>
+                  <label for="femenino" class="form-check-label text-white">Atención para Cirugías</label>
                   <br>
-                  <input type="radio" class="form-check-input radioBoton" id="otro" name="genero" value="otro" required>
-                  <label for="otro" class="form-check-label text-white">Otro</label>
+                  <input type="radio" class="form-check-input radioBoton" id="telemedicina" name="genero" value="otro" required>
+                  <label for="otro" class="form-check-label text-white">Tele Medicina</label>
                 </div>
               </div>
 
-              <!-- INGRESE SU OBRA SOCIAL -->
-              <div class="my-4">
-                <label for="exampleModalLabel" class="form-label text-white textosombra">Obra Social </label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Ingrese su Obra Social"
-                  id="exampleNombreCompleto"
-                  required
-                  minlength="4"
-                  maxlength="48"
-                />
-              </div>
-    
-            
+                          
     
               <input type="submit" class="btn btn btn-outline-light w-100" value="Registrarse" />
             </form>
