@@ -23,3 +23,17 @@ body {
       .fonditogris {
         background-color: rgba(0, 0, 0, 0.12);
       }
+
+      .radioBoton {
+        border-color: #2edf0fd3 !important;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+      }
+
+      .radioBoton:checked {
+        background-color: #f10b0bf6 !important;  
+        border-color: #ffe600;
+        
+      }
