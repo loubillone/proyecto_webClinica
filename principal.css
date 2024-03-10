@@ -11,16 +11,14 @@ body{
 .leona{
     border-radius: 30px;
     margin-bottom: 5px;
-
 }
 
 .carousel{
-   /*  position:static !important */
+    position:static !important
 }
 
 .image{
-    width: 100% !important ;
-    height: auto !important;
+    width: 100% !important;
 }
 
 .navbar{ 
@@ -32,4 +30,8 @@ body{
 .logotipo{
     display:flex;
     align-items: center;
+}
+
+.margenmain{
+    margin-top: 26px;
 }
