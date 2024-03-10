@@ -15,70 +15,37 @@
 </head>
 
 <body>
-  <h1>Pagina principal</h1>
 
-  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid ">
-      <div class="contenedor mb-0 w-100 d-flex align-items-center justify-content-between">
-        <h3 class="logotipo">
-          <img src="img/medical-calendar-icon-free-vector-removebg-preview.png"  width="80px" height="80px" alt="leona" class="leona">
-          Centro Medico
-        </h3>
-        <div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/nosotros.html">Nosotros</a>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Medicos
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/pages/Peliculas.html">Gastroenterologo</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="/pages/Series.html">Cardiologo</a></li>
-                </ul>
-              </li>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="../proyecto_webClinica/img/medical-calendar-icon-free-vector.png" class="leona" alt="" width="50px" height="50px"> Centro medico</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-            <form class="d-flex" role="search">
-              <div class="BuscarEnlace">
-
-                <button type="button" class="btn btn-light button-space ">Buscar</button>
-              </div>
-              <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search" minlength="5"
-                maxlength="198">
-
-              <!-- <div class="BuscarEnlace">
+          </li>
           
-              <button type="button" class="btn btn-light ">Buscar</button>
-             </div> -->
-
-            </form>
-            <div class="d-grid gap-2 d-md-block mb-3">
-              <button type="button" class="btn mt-3 btn-light button-space" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">Login</button>
-
-              <!-- Button trigger modal -->
-
-              <button class="btn mt-3 btn-light button-space" type="button">logout</a></button>
-
-            </div>
-
-          </div>
-
-        </div>
-
+        </ul>
+          <button class="btn btn-outline-danger" type="submit">Logout</button>
+      </div>
+    </div>
   </nav>
 
   <Main class="margenmain">

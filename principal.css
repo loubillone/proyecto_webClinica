@@ -11,10 +11,11 @@ body{
 .leona{
     border-radius: 30px;
     margin-bottom: 5px;
+    mix-blend-mode: multiply;
 }
 
 .carousel{
-    position:static !important
+   /*  position:static !important */
 }
 
 .image{
@@ -32,6 +33,6 @@ body{
     align-items: center;
 }
 
-.margenmain{
+/* .margenmain{
     margin-top: 26px;
-}
+} */
