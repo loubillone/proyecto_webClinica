@@ -1,0 +1,83 @@
+body {
+  /* background-image: radial-gradient(
+    circle at 50% 50%,
+    #ffffff 0,
+    #b7d6f4 50%,
+    #4e8bbe 100%
+  ); */
+
+  background-image: radial-gradient(
+    circle at 13.76% 50%,
+    #00c8ff 0,
+    #008cd1 25%,
+    #11527d 50%,
+    #091f32 75%,
+    #000000 100%
+  );
+}
+
+/*Menú */
+.navbar {
+  /* background-image: radial-gradient(
+    circle at 50% 50%,
+    #ffffff 0,
+    #b7d6f4 50%,
+    #4e8bbe 100%
+  ); */
+
+  background-image: radial-gradient(
+    circle at 13.76% 50%,
+    #00c8ff 0,
+    #008cd1 25%,
+    #11527d 50%,
+    #091f32 75%,
+    #000000 100%
+  );
+  height: 13%;
+}
+
+/*No se utilizó*/
+/* .button-space {
+  margin-left: 8px;
+  margin-right: 8px;
+} */
+
+/*Logo*/
+.leona {
+  border-radius: 30px;
+  margin-bottom: 5px;
+  mix-blend-mode: multiply;
+}
+
+.logotipo {
+  display: flex;
+  align-items: center;
+}
+
+/*Carousel principal*/
+/* .carousel {
+  position:static !important
+} */
+
+.carousel-inner .carousel-item {
+  height: 100vh;
+}
+
+.carousel-inner .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  /* filter: grayscale(0.8); */
+}
+
+.image {
+  width: 100%;
+  /* object-fit: contain; */
+}
+
+/*Media queries*/
+
+@media screen and (max-width: 992px) {
+  .carousel-inner .carousel-item {
+    height: 50vh;
+  }
+}
