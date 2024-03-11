@@ -1,0 +1,40 @@
+.card-medicos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.5rem;
+  color: #090979;
+  box-shadow: 5px 5px 21px 0px #5e6c6f;
+  min-height: 20rem;
+  transition-duration: 1s;
+}
+
+.card-medicos:hover {
+  transform: scale(1.1);
+}
+
+.card-medicos img {
+  margin-top: 1rem;
+  width: 50%;
+  border-radius: 100%;
+  border: 4px solid #090979;
+}
+
+.boton-card {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 3rem;
+  background-color: #18a488;
+  border: none;
+  color: white;
+  /* transition-duration: 1s; */
+}
+
+.boton-card a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.boton-card:hover {
+  background-color: #090979;
+  /* transform: scale(1.1); */
+}
