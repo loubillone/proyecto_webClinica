@@ -25,6 +25,16 @@ body {
     #4e8bbe 100%
   ); */
 
+  .boton-navbar {
+    background-color: #18a488;
+    color: whitesmoke;
+    border: none;
+  }
+
+  .boton-navbar:hover {
+    background-color: #090979;
+  }
+
   background-image: radial-gradient(
     circle at 13.76% 50%,
     #00c8ff 0,
