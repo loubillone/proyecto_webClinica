@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pacientes</title>
+    <link rel="stylesheet" href="../css/registroPacientes.css">
+    <link rel="stylesheet" href="#">
+
+    <!-- probando -->
+
+    <!-- Link de BOOTSTRAP -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"> </script>
+    <!--  -->
+
+    <!-- Link Font Awesome p/ ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- lINK google Fonts  - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&family=Roboto+Mono:wght@600;700&display=swap"
+       rel="stylesheet"
+     />
+
+</head>
+<body>
+
+    <main class="d-flex justify-content-center barranav mb-5">
+        <div class="row container my-5 px-3">
+          <!-- INICIA FORMULARIO -->
+          <div class="col-xl-7 py-3 fonditogris centrador">
+            <div class="text-white d-flex text-align-center">
+              <h2>¿Primera vez en WebClínica? Por favor regístrese para acceder a nuestros servicios.</h2>
+            </div>
+            <!-- Aquí va el FORM ACTION, es la ACCION del formulario al LOGUEARSE -->
+            <form class="roboto400" action="#">
+              <!-- En este caso lo redireccionamos a un ERROR404 (momentaneamente) -->
+
+
+              <!-- INGRESE SU NOMBRE COMPLETO -->
+              <div class="my-4">
+                <label for="exampleModalLabel" class="form-label text-white textosombra">Nombre Completo </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Ingrese su Nombre y Apellido"
+                  id="exampleNombreCompleto"
+                  required
+                  minlength="5"
+                  maxlength="48"
+                />
+              </div>
+
+              <!-- INGRESA TU AÑO DE NACIMIENTO -->
+              <div class="my-4">
+                <label for="exampleModalLabel" class="form-label text-white textosombra">Año de Nacimiento </label>
+                <input
+                  type="date"
+                  class="form-control"
+                  placeholder="Ingrese el año de su nacimiento"
+                  id="exampleNacimiento"
+                  required
+                  minlength="4"
+                  maxlength="5"
+                />
+              </div>
+
+              <!-- INGRESA TU EMAIL -->
+              <div class="my-4">
+                <label for="exampleInputEmail1" class="form-label text-white textosombra">Email </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="nombre@ejemplo.com"
+                  id="exampleInputEmail0"
+                  aria-describedby="emailHelp"
+                  required
+                  minlength="5"
+                  maxlength="40"
+                />
+                <div id="emailHelp" class="form-text text-white">Nunca compartiremos tu email con terceros.</div>
+              </div>
+
+              <!-- INICIA NUEVO  MODELO DE PASSWORD -->
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label text-white textosombra">Contraseña</label>
+                </div>
+                <div class="col-auto">
+                  <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Contraseña" required
+                  minlength="8"
+                  maxlength="22">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text text-white textosombras">
+                    Debe tener entre 8 y 20 carácteres.
+                  </span>
+                </div>
+              </div>
+              <!-- FIN DEL NUEVO MODELO -->
+
+
+              <!-- CODIGO TRADICIONAL DE PASSWORD -->
+              <div class="my-4">
+                <label for="exampleInputPassword1" class="form-label text-white textosombra">Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control mb-3 "
+                  placeholder="Contraseña"
+                  id="exampleInputPassword1"
+                  required
+                  minlength="8"
+                  maxlength="22"
+                  />
+              </div>
+
+              <!-- SELECCIONA TU GENERO -->
+              <div class="my-4">
+                <label for="genero" class="form-label text-white textosombra">Género</label>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input radioBoton" id="masculino" name="genero" value="masculino" required>
+                  <label for="masculino" class="form-check-label text-white">Masculino</label>
+                  <br>
+                  <input type="radio" class="form-check-input radioBoton" id="femenino" name="genero" value="femenino" required>
+                  <label for="femenino" class="form-check-label text-white">Femenino</label>
+                  <br>
+                  <input type="radio" class="form-check-input radioBoton" id="otro" name="genero" value="otro" required>
+                  <label for="otro" class="form-check-label text-white">Otro</label>
+                </div>
+              </div>
+
+              <!-- INGRESE SU OBRA SOCIAL -->
+              <div class="my-4">
+                <label for="exampleModalLabel" class="form-label text-white textosombra">Obra Social </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Ingrese su Obra Social"
+                  id="exampleNombreCompleto"
+                  required
+                  minlength="4"
+                  maxlength="48"
+                />
+              </div>
+    
+            
+    
+              <input type="submit" class="btn btn btn-outline-light w-100" value="Registrarse" />
+            </form>
+    
+             
+          
+          <!-- FIN DE FORMULARIO  -->
+    
+        </div>
+      </main>
+          
+    </body>
+    </html>
+    
+</body>
+</html>

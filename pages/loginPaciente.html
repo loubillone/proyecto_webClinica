@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logien de Pacientes</title>
+    <link rel="stylesheet" href="../css/loginPaciente.css">
+    <link rel="stylesheet" href="#">
+    <!-- Link de Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--  -->
+
+    <!-- Link Font Awesome p/ ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- lINK google Fonts  - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&family=Roboto+Mono:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+
+</head>
+<body>
+
+  <main class="d-flex justify-content-center barranav mb-5">
+    <div class="row container my-5 px-3">
+      <!-- INICIA FORMULARIO -->
+      <div class="col-xl-7 py-3 fonditogris centrador">
+        <div class="text-white d-flex text-align-center">
+          <h2>Sr. Paciente, por favor proceda a loguearse.</h2>
+        </div>
+        <!-- Aquí va el FORM ACTION, es la ACCION del formulario al LOGUEARSE -->
+        <form class="roboto400" action="#">
+          <!-- En este caso lo redireccionamos a un ERROR404 (momentaneamente) -->
+          <div class="my-4">
+            <label for="exampleInputEmail1" class="form-label text-white textosombra">Email </label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="nombre@ejemplo.com"
+              id="exampleInputEmail0"
+              aria-describedby="emailHelp"
+              required
+              minlength="5"
+              maxlength="40"
+            />
+            <div id="emailHelp" class="form-text text-white">Nunca compartiremos tu email con terceros.</div>
+          </div>
+          <div class="my-4">
+            <label for="exampleInputPassword1" class="form-label text-white textosombra">Contraseña</label>
+            <input
+              type="password"
+              class="form-control mb-3 "
+              placeholder="Contraseña"
+              id="exampleInputPassword1"
+              required
+              minlength="8"
+              maxlength="22"
+            />
+            <a
+              class="text-white text-decoration-none"
+              id="resaltador"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              >¿Ha olvidado su contraseña?</a
+            >
+          </div>
+
+        
+
+          <input type="submit" class="btn btn btn-outline-light w-100" value="Iniciar Sesión" />
+        </form>
+
+     <!-- INICIO MODAL OLVIDASTE CONTRASEÑA -->
+     <form action="#">
+     <div
+     class="modal fade text-center"
+     id="exampleModal"
+     tabindex="-1"
+     data-bs-backdrop="static"
+     aria-labelledby="exampleModalLabel"
+     aria-hidden="true"
+   >
+     <div class="modal-dialog">
+     <div class="modal-content bg-dark text-white">
+       <div class="modal-header contenedor-modal">
+       <h1 class="modal-title fs-5 mt-1 pb-2 ps-5 ms-3 pe-4" id="exampleModalLabel">
+         ¿Tienes problemas para iniciar sesión?
+       </h1>
+       <button
+         type="button"
+         class="btn-close bg-white"
+         data-bs-dismiss="modal"
+         aria-label="Close"
+       ></button>
+       </div>
+       <div class="modal-body">
+       <p class="p-modal">
+         Ingresa tu correo electronico, telefono o usuario y te enviaremos un enlace para que recuperes tu
+         cuenta.
+       </p>
+       <label for="exampleInputEmail1" class="form-label text-white">Tus datos </label>
+       <input
+         type="text"
+         class="form-control"
+         placeholder="Correo Electrónico, teléfono o usuario"
+         id="exampleInputEmail1"
+         aria-describedby="emailHelp"
+         required
+         minlength="5"
+         maxlength="40"
+       />
+       </div>
+       <div class="modal-footer">
+       <input type="submit" href="#" class="btn btn-success" value="Enviar tus datos de contacto" />
+       </div>
+     </div>
+     </div>
+   </div>
+  </form>
+   <!-- FIN MODAL OLVIDASTE CONTRASEÑA -->
+
+      </div>
+        <div class="mt-4 text-center">
+          <a class="text-white text-decoration-none" href="./registroPaciente.html"
+            >¿No tienes cuenta? Registraté ahora</a
+          >
+        </div>
+      </div>
+      <!-- FIN DE FORMULARIO  -->
+
+    </div>
+  </main>
+      
+</body>
+</html>
