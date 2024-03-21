@@ -36,18 +36,48 @@ const registroMedico = () => {
   let password = document.getElementById("password").value;
   let confPass = document.getElementById("confPass").value;
 
-  if (password != confPass) {
-    return alert("Las contraseñas no coinciden");
+  const validarEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  const resultadoValidacion = validarEmail.test(email);
+
+  if (!resultadoValidacion) {
+    return Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "No es un email válido",
+    });
   }
 
-  let validarEmail = usuariosMedicos.find((usuario) => {
+  let buscadorEmail = usuariosMedicos.find((usuario) => {
     return usuario.email === email;
   });
 
-  if (validarEmail) {
-    return alert(
-      "El email ya está registrado, por favor inicie sesión con sus credenciales"
-    );
+  if (buscadorEmail !== undefined) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "El Correo ingresado ya esta registrado",
+    });
+    return;
+  }
+
+  const validarPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+  const resultadoValidacionPass = validarPass.test(password);
+
+  if (!resultadoValidacionPass) {
+    return Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "No es una contraseña válida",
+    });
+  }
+
+  if (password != confPass) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Las contraseñas no coinciden",
+    });
+    return;
   }
 
   usuariosMedicos.push(
