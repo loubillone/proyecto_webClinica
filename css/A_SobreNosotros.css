@@ -91,7 +91,7 @@ h1 {
 	background-image: linear-gradient(
 		to right top,
 		rgb(123, 165, 255),
-		rgb(0, 192, 102)
+		rgb(0, 170, 192)
 	);
 	transition: 0.5s;
 }
