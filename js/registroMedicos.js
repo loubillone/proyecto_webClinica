@@ -9,6 +9,7 @@ class Medico {
     dia,
     horario,
     password,
+    imagen,
     rol = "medico"
   ) {
     this.nombre = nombre;
@@ -17,6 +18,7 @@ class Medico {
     this.dia = dia;
     this.horario = horario;
     this.password = password;
+    this.imagen = imagen;
     this.rol = rol;
   }
 }
@@ -35,6 +37,7 @@ const registroMedico = () => {
   let horario = document.getElementById("horario").value;
   let password = document.getElementById("password").value;
   let confPass = document.getElementById("confPass").value;
+  let imagen = document.getElementById("imagen").value;
 
   const validarEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const resultadoValidacion = validarEmail.test(email);
@@ -81,7 +84,16 @@ const registroMedico = () => {
   }
 
   usuariosMedicos.push(
-    new Medico(nombre, especialidad, email, dia, horario, password, this.rol)
+    new Medico(
+      nombre,
+      especialidad,
+      email,
+      dia,
+      horario,
+      password,
+      imagen,
+      this.rol
+    )
   );
 
   localStorage.setItem("usuariosMedicos", JSON.stringify(usuariosMedicos));
