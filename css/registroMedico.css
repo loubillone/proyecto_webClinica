@@ -1,39 +1,44 @@
 body {
-    background-image: radial-gradient(circle at 13.76% 50%, #00c8ff 0, #008cd1 25%, #11527d 50%, #091f32 75%, #000000 100%);
+  background-image: radial-gradient(
+    circle at 13.76% 50%,
+    #00c8ff 0,
+    #008cd1 25%,
+    #11527d 50%,
+    #091f32 75%,
+    #000000 100%
+  );
+}
 
-    }
+.centrador {
+  margin: 0 auto;
+  width: fit-content;
+}
 
-    .centrador {
-        margin: 0 auto;
-        width: fit-content;
-    }
+#resaltador:hover {
+  color: yellow !important;
+}
 
-    #resaltador:hover {
-        color: yellow !important;
-      }
+.textosombra {
+  text-shadow: 1px 2px 2px black;
+}
 
-      .textosombra {
-        text-shadow: 1px 2px 2px black;
-      }
+input::placeholder {
+  color: rgb(174, 174, 174) !important;
+}
 
-      input::placeholder {
-        color: rgb(174, 174, 174) !important;
-      }
+.fonditogris {
+  background-color: rgba(0, 0, 0, 0.12);
+}
 
-      .fonditogris {
-        background-color: rgba(0, 0, 0, 0.12);
-      }
+.radioBoton {
+  border-color: #2edf0fd3 !important;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+}
 
-      .radioBoton {
-        border-color: #2edf0fd3 !important;
-        background-color: #fff;
-        border-radius: 50%;
-        width: 16px;
-        height: 16px;
-      }
-
-      .radioBoton:checked {
-        background-color: #f10b0bf6 !important;  
-        border-color: #ffe600;
-        
-      }
+.radioBoton:checked {
+  background-color: #f10b0bf6 !important;
+  border-color: #ffe600;
+}
