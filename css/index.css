@@ -18,23 +18,6 @@ body {
 
 /*Menú */
 .navbar {
-  /* background-image: radial-gradient(
-    circle at 50% 50%,
-    #ffffff 0,
-    #b7d6f4 50%,
-    #4e8bbe 100%
-  ); */
-
-  .boton-navbar {
-    background-color: #18a488;
-    color: whitesmoke;
-    border: none;
-  }
-
-  .boton-navbar:hover {
-    background-color: #090979;
-  }
-
   background-image: radial-gradient(
     circle at 13.76% 50%,
     #00c8ff 0,
@@ -46,11 +29,15 @@ body {
   height: 13%;
 }
 
-/*No se utilizó*/
-/* .button-space {
-  margin-left: 8px;
-  margin-right: 8px;
-} */
+.boton-navbar {
+  background-color: #18a488;
+  color: whitesmoke;
+  border: none;
+}
+
+.boton-navbar:hover {
+  background-color: #090979;
+}
 
 /*Logo*/
 .leona {
@@ -63,11 +50,6 @@ body {
   display: flex;
   align-items: center;
 }
-
-/*Carousel principal*/
-/* .carousel {
-  position:static !important
-} */
 
 .carousel-inner .carousel-item {
   height: 100vh;
