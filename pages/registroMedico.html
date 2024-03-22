@@ -1,132 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/registroMedico.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/registroMedico.css" />
     <!-- Link de BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <!-- Link Font Awesome p/ ICONOS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- lINK google Fonts  - Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&family=Roboto+Mono:wght@600;700&display=swap"
-       rel="stylesheet"
-     />
-     <title>Web Clínica || Registro Médico</title>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&family=Roboto+Mono:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Web Clínica || Registro Médico</title>
+  </head>
+  <body>
     <main class="d-flex justify-content-center barranav mb-5">
-      <!--ESTE DIV NO CIERRA-->
-        <div class="row container my-5 px-3">
-          <!-- INICIA FORMULARIO -->
-          <div class="col-xl-7 py-3 fonditogris centrador">
-            <div class="text-white d-flex text-align-center">
-              <h2>¿Deseas trabajar en Webclinica? Por favor regístrese para acceder a una evaluación exahustiva.</h2>
-            </div>
+      <div class="row container my-5 px-3">
+        <!-- INICIA FORMULARIO -->
+
+        <div class="col-xl-7 py-3 fonditogris centrador">
+          <div class="text-white d-flex text-align-center">
+            <h2>
+              ¿Deseas trabajar en Webclinica? Por favor regístrese para acceder
+              a una evaluación exahustiva.
+            </h2>
           </div>
 
-          <!-- INICIA NUEVO  MODELO DE PASSWORD -->
-          <div class="row g-3 align-items-center">
-            <div class="col-auto">
+          <form class="roboto400" id="formulario">
+            <!-- INGRESE SU NOMBRE COMPLETO -->
+            <div class="my-4">
               <label
-                for="inputPassword6"
-                class="col-form-label text-white textosombra"
-                >Contraseña</label
-              >
-            </div>
-            <div class="col-auto">
+                for="exampleModalLabel"
+                class="form-label text-white textosombra"
+                >Nombre Completo
+              </label>
               <input
-                type="password"
-                id="password"
+                type="text"
                 class="form-control"
-                aria-describedby="passwordHelpInline"
-                placeholder="Contraseña"
+                placeholder="Ingrese su Nombre y Apellido"
+                id="nombre"
                 required
               />
             </div>
-            <div class="col-auto">
-              <span
-                id="passwordHelpInline"
-                class="form-text text-white textosombras"
-              >
-                La contraseña debe tener al entre 8 y 16 caracteres, al menos un
-                dígito, al menos una minúscula y al menos una mayúscula. NO
-                puede tener otros símbolos.
-              </span>
-            </div>
-          </div>
 
-          <div class="row g-3 align-items-center mb-2">
-            <div class="col-auto">
+            <!-- INGRESA TU ESPECIALIDAD -->
+            <div class="my-4">
               <label
-                for="inputPassword6"
-                class="col-form-label text-white textosombra"
-                >Contraseña</label
+                for="exampleModalLabel"
+                class="form-label text-white textosombra"
               >
-            </div>
-            <div class="col-auto">
+                Especialidad
+              </label>
               <input
-                type="password"
-                id="confPass"
+                type="text"
                 class="form-control"
-                aria-describedby="passwordHelpInline"
-                placeholder="Contraseña"
+                placeholder="Ingrese su Especialidad"
+                id="especialidad"
                 required
               />
             </div>
-          </div>
-          <!-- FIN DEL NUEVO MODELO -->
 
-          <!-- ROL DEL MEDICO -->
-          <!-- <div class="my-4">
-            <label for="rol" class="form-label text-white textosombra"
-              >Rol Médico</label
+            <!-- DIA DE ATENCIÓN -->
+            <div class="my-4">
+              <label
+                for="exampleModalLabel"
+                class="form-label text-white textosombra"
+              >
+                Días y horarios de Atención.
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ingrese sus días y horarios de atención."
+                id="dia"
+                required
+              />
+            </div>
+
+            <!-- HORARIO DE ATENCIÓN -->
+            <div class="my-4">
+              <label
+                for="exampleModalLabel"
+                class="form-label text-white textosombra"
+              >
+                Días y horarios de Atención.
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ingrese sus días y horarios de atención."
+                id="horario"
+                required
+              />
+            </div>
+
+            <!-- INGRESA TU EMAIL -->
+            <div class="my-4">
+              <label
+                for="exampleInputEmail1"
+                class="form-label text-white textosombra"
+                >Email
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="nombre@ejemplo.com"
+                id="email"
+                aria-describedby="emailHelp"
+                required
+              />
+              <div id="emailHelp" class="form-text text-white">
+                Nunca compartiremos tu email con terceros.
+              </div>
+            </div>
+
+            <!-- CONTRASEÑA -->
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label
+                  for="inputPassword6"
+                  class="col-form-label text-white textosombra"
+                  >Contraseña</label
+                >
+              </div>
+              <div class="col-auto">
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  aria-describedby="passwordHelpInline"
+                  placeholder="Contraseña"
+                  required
+                />
+              </div>
+              <div class="col-auto mb-3">
+                <span
+                  id="passwordHelpInline"
+                  class="form-text text-white textosombras"
+                >
+                  La contraseña debe tener al entre 8 y 16 caracteres, al menos
+                  un dígito, al menos una minúscula y al menos una mayúscula. NO
+                  puede tener otros símbolos
+                </span>
+              </div>
+            </div>
+
+            <!-- CONFIRMAR CONTRASEÑA -->
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label
+                  for="inputPassword6"
+                  class="col-form-label text-white textosombra"
+                  >Confirmar contraseña</label
+                >
+              </div>
+              <div class="col-auto">
+                <input
+                  type="password"
+                  id="confPass"
+                  class="form-control"
+                  aria-describedby="passwordHelpInline"
+                  placeholder="Contraseña"
+                  required
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn btn-outline-light w-100 mt-3"
+              value="Registrarse"
             >
-            <div class="form-check">
-              <input
-                type="radio"
-                class="form-check-input radioBoton"
-                id="consultorio"
-                name="genero"
-                value="masculino"
-                required
-              />
-              <label for="masculino" class="form-check-label text-white"
-                >Atención en Consultorio</label
-              >
-              <br />
-              <input
-                type="radio"
-                class="form-check-input radioBoton"
-                id="cirugia"
-                name="genero"
-                value="femenino"
-                required
-              />
-              <label for="femenino" class="form-check-label text-white"
-                >Atención para Cirugías</label
-              >
-              <br />
-              <input
-                type="radio"
-                class="form-check-input radioBoton"
-                id="telemedicina"
-                name="genero"
-                value="otro"
-                required
-              />
-              <label for="otro" class="form-check-label text-white"
-                >Tele Medicina</label
-              >
-            </div>
-          </div> -->
-
-          <button class="btn btn btn-outline-light w-100">Registrarse</button>
-        </form>
-
-        <!-- FIN DE FORMULARIO  -->
+              Registrarme
+            </button>
+          </form>
+          <!-- FIN DE FORMULARIO  -->
+        </div>
       </div>
     </main>
 
@@ -137,32 +201,10 @@
       crossorigin="anonymous"
     ></script>
 
-    <!--Javascript-->
-    <script src="../js/registroMedicos.js"></script>
-
-<<<<<<< HEAD
     <!--SweetAlert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--Javascript-->
+    <script src="../js/registroMedicos.js"></script>
   </body>
 </html>
-=======
-                          
-    
-              <input type="submit" class="btn btn btn-outline-light w-100" value="Registrarse" />
-            </form>
-    
-             
-          
-          <!-- FIN DE FORMULARIO  -->
-    
-        </div>
-      </main>
-
-          <!--Bootstrap-->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"> </script>
-    </body>
-    </html>
-    
-</body>
-</html>
->>>>>>> develop
