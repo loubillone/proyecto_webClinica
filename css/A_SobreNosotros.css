@@ -6,20 +6,20 @@ body {
     #11527d 50%,
     #091f32 75%,
     #000000 100%);
-    margin: 0;
+    /* margin: 0;
 	padding: 0;
 	width: 100%;
 	height: 100vh;
 	display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; */
 }
 
 .heading {
 	color: white;
 	font-size: 60px;
 	text-align: justify;
-	/* font-family: Arial, Helvetica, sans-serif; */
+	
 	text-shadow: 1px 2px 2px black;
 }
 
@@ -27,12 +27,12 @@ p {
 	color: white;
 	font-size: 18px;
 	text-align: center;
-	/* font-family: Arial, Helvetica, sans-serif; */
+	
 }
 
-h1 {
-	margin-top: 150px;
-}
+/* h1 {
+	margin-top: 1px;
+} */
 
 .maincard {
 	/* margin: 100px 100px; */
@@ -77,9 +77,9 @@ h1 {
 	cursor: pointer;
 }
 
-.contenedorMain {
+/* .contenedorMain {
 	margin-top: 20vh;
-}
+} */
 
 .cardConocenos .efect {
 	z-index: 1;
@@ -134,3 +134,5 @@ h1 {
 .micro{
 	height: 11px;
 }
+
+
