@@ -96,9 +96,9 @@ const registroMedico = () => {
     timer: 2000,
   });
 
-  //   setTimeout(() => {
-  //     location.replace("loginMedico.html");
-  //   }, 2500);
+  setTimeout(() => {
+    location.replace("loginMedico.html");
+  }, 2500);
 };
 
 formulario.addEventListener("submit", handleSubmit);
