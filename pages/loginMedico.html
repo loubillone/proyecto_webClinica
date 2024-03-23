@@ -36,10 +36,10 @@
         <!-- INICIA FORMULARIO -->
         <div class="col-xl-7 py-3 fonditogris centrador">
           <div class="text-white d-flex text-align-center">
-            <h2>Sr. Paciente, por favor proceda a loguearse</h2>
+            <h2>Dr, por favor proceda a loguearse</h2>
           </div>
           <!-- Aquí va el FORM ACTION, es la ACCION del formulario al LOGUEARSE -->
-          <form class="roboto400" action="#">
+          <form class="roboto400" id="formularioMedico">
             <!-- En este caso lo redireccionamos a un ERROR404 (momentaneamente) -->
             <div class="my-4">
               <label
@@ -51,7 +51,7 @@
                 type="email"
                 class="form-control"
                 placeholder="nombre@ejemplo.com"
-                id="exampleInputEmail0"
+                id="emailMedico"
                 aria-describedby="emailHelp"
                 required
                 minlength="5"
@@ -71,7 +71,7 @@
                 type="password"
                 class="form-control mb-3"
                 placeholder="Contraseña"
-                id="exampleInputPassword1"
+                id="passMedico"
                 required
                 minlength="8"
                 maxlength="22"
@@ -171,5 +171,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!--Javascript-->
+    <script src="../js/loginMedicos.js"></script>
   </body>
 </html>

@@ -17,8 +17,11 @@ const inicioSesionPaciente = () => {
   });
 
   if (validarPaciente) {
-    if (validarPaciente.contraseña === password) {
-      localStorage.setItem("loginAdmin", JSON.stringify(validarPaciente));
+    if (
+      validarPaciente.contraseña === password &&
+      validarPaciente.rol === "paciente"
+    ) {
+      localStorage.setItem("loginPaciente", JSON.stringify(validarPaciente));
       location.replace("/index.html");
     } else {
       alert("Su correo o contraseña es incorrecto, verifique sus credenciales");
