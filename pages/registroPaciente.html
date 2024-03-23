@@ -39,7 +39,7 @@
             </h2>
           </div>
           <!-- INICIA FORMULARIO -->
-          <form class="roboto400" action="#">
+          <form class="roboto400" action="#" id="formulario">
             <!-- En este caso lo redireccionamos a un ERROR404 (momentaneamente) -->
 
             <!-- INGRESE SU NOMBRE COMPLETO -->
@@ -53,10 +53,10 @@
                 type="text"
                 class="form-control"
                 placeholder="Ingrese su Nombre y Apellido"
-                id="exampleNombreCompleto"
+                id="nombreCompleto"
                 required
-                minlength="5"
-                maxlength="48"
+                minlength="3"
+                maxlength="30"
               />
             </div>
 
@@ -71,7 +71,7 @@
                 type="date"
                 class="form-control"
                 placeholder="Ingrese el año de su nacimiento"
-                id="exampleNacimiento"
+                id="fechNac"
                 required
                 minlength="4"
                 maxlength="5"
@@ -89,7 +89,7 @@
                 type="email"
                 class="form-control"
                 placeholder="nombre@ejemplo.com"
-                id="exampleInputEmail0"
+                id="email"
                 aria-describedby="emailHelp"
                 required
                 minlength="5"
@@ -112,7 +112,7 @@
               <div class="col-auto">
                 <input
                   type="password"
-                  id="inputPassword6"
+                  id="contraseña"
                   class="form-control"
                   aria-describedby="passwordHelpInline"
                   placeholder="Contraseña"
@@ -137,13 +137,13 @@
               <label
                 for="exampleInputPassword1"
                 class="form-label text-white textosombra"
-                >Contraseña</label
+                >Repetir contraseña</label
               >
               <input
                 type="password"
                 class="form-control mb-3"
-                placeholder="Contraseña"
-                id="exampleInputPassword1"
+                placeholder="Repetir contraseña"
+                id="confPass"
                 required
                 minlength="8"
                 maxlength="22"
@@ -153,45 +153,18 @@
             <!-- SELECCIONA TU GENERO -->
             <div class="my-4">
               <label for="genero" class="form-label text-white textosombra"
-                >Género</label
-              >
-              <div class="form-check">
+                >Género</label>
                 <input
-                  type="radio"
-                  class="form-check-input radioBoton"
-                  id="masculino"
-                  name="genero"
-                  value="masculino"
-                  required
-                />
-                <label for="masculino" class="form-check-label text-white"
-                  >Masculino</label
-                >
-                <br />
-                <input
-                  type="radio"
-                  class="form-check-input radioBoton"
-                  id="femenino"
-                  name="genero"
-                  value="femenino"
-                  required
-                />
-                <label for="femenino" class="form-check-label text-white"
-                  >Femenino</label
-                >
-                <br />
-                <input
-                  type="radio"
-                  class="form-check-input radioBoton"
-                  id="otro"
-                  name="genero"
-                  value="otro"
-                  required
-                />
-                <label for="otro" class="form-check-label text-white"
-                  >Otro</label
-                >
-              </div>
+                type="text"
+                class="form-control"
+                placeholder="Ingrese su Género"
+                id="genero"
+                required
+                minlength="4"
+                maxlength="48"
+              />
+               
+            
             </div>
 
             <!-- INGRESE SU OBRA SOCIAL -->
@@ -205,7 +178,7 @@
                 type="text"
                 class="form-control"
                 placeholder="Ingrese su Obra Social"
-                id="exampleNombreCompleto"
+                id="obraSocial"
                 required
                 minlength="4"
                 maxlength="48"
@@ -229,5 +202,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+  <!--SweetAlert-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!--Javascript-->
+  <script src="../js/registroPacientes.js"></script>
+
   </body>
 </html>
