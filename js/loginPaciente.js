@@ -21,7 +21,7 @@ const inicioSesionPaciente = () => {
       validarPaciente.contraseña === password &&
       validarPaciente.rol === "paciente"
     ) {
-      localStorage.setItem("loginPaciente", JSON.stringify(validarPaciente));
+      localStorage.setItem("login", JSON.stringify(validarPaciente));
       location.replace("/index.html");
     } else {
       alert("Su correo o contraseña es incorrecto, verifique sus credenciales");

@@ -1,4 +1,4 @@
-let usuariosMedicos = JSON.parse(localStorage.getItem("usuariosMedicos")) || [];
+let usuariosMedicos = JSON.parse(localStorage.getItem("panelAdmin")) || [];
 let formulario = document.getElementById("formulario");
 
 class Medico {
@@ -96,7 +96,7 @@ const registroMedico = () => {
     )
   );
 
-  localStorage.setItem("usuariosMedicos", JSON.stringify(usuariosMedicos));
+  localStorage.setItem("panelAdmin", JSON.stringify(usuariosMedicos));
 
   document.getElementById("formulario").reset();
 

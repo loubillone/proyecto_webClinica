@@ -17,7 +17,7 @@ const inicioSesionAdmin = () => {
 
   if (validarAdmin) {
     if (validarAdmin.password === password) {
-      localStorage.setItem("loginAdmin", JSON.stringify(validarAdmin));
+      localStorage.setItem("login", JSON.stringify(validarAdmin));
       location.replace("/index.html");
     } else {
       alert("Su correo o contraseña es incorrecto, verifique sus credenciales");
