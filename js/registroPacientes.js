@@ -1,5 +1,4 @@
-let usuariosPaciente =
-  JSON.parse(localStorage.getItem("usuariosPaciente")) || [];
+let usuariosPaciente = JSON.parse(localStorage.getItem("panelAdmin")) || [];
 let formulario = document.getElementById("formulario");
 
 class Paciente {
@@ -74,7 +73,7 @@ const validarPaciente = () => {
     )
   );
 
-  localStorage.setItem("usuariosPaciente", JSON.stringify(usuariosPaciente));
+  localStorage.setItem("panelAdmin", JSON.stringify(usuariosPaciente));
 
   document.getElementById("formulario").reset();
 

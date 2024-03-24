@@ -1,24 +1,11 @@
-let usuariosMedicos = JSON.parse(localStorage.getItem("panelAdmin")) || [];
+let usuariosAdmin = JSON.parse(localStorage.getItem("usuariosAdmin")) || [];
 let formulario = document.getElementById("formulario");
 
-class Medico {
-  constructor(
-    nombre,
-    especialidad,
-    email,
-    dia,
-    horario,
-    password,
-    imagen,
-    rol = "medico"
-  ) {
+class Admin {
+  constructor(nombre, email, password, rol = "admin") {
     this.nombre = nombre;
-    this.especialidad = especialidad;
     this.email = email;
-    this.dia = dia;
-    this.horario = horario;
     this.password = password;
-    this.imagen = imagen;
     this.rol = rol;
   }
 }
@@ -26,18 +13,14 @@ class Medico {
 const handleSubmit = (e) => {
   e.preventDefault();
 
-  registroMedico();
+  registroAdmin();
 };
 
-const registroMedico = () => {
+const registroAdmin = () => {
   let nombre = document.getElementById("nombre").value;
-  let especialidad = document.getElementById("especialidad").value;
   let email = document.getElementById("email").value;
-  let dia = document.getElementById("dia").value;
-  let horario = document.getElementById("horario").value;
   let password = document.getElementById("password").value;
   let confPass = document.getElementById("confPass").value;
-  let imagen = document.getElementById("imagen").value;
 
   const validarEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const resultadoValidacion = validarEmail.test(email);
@@ -50,7 +33,7 @@ const registroMedico = () => {
     });
   }
 
-  let buscadorEmail = usuariosMedicos.find((usuario) => {
+  let buscadorEmail = usuariosAdmin.find((usuario) => {
     return usuario.email === email;
   });
 
@@ -83,20 +66,9 @@ const registroMedico = () => {
     return;
   }
 
-  usuariosMedicos.push(
-    new Medico(
-      nombre,
-      especialidad,
-      email,
-      dia,
-      horario,
-      password,
-      imagen,
-      this.rol
-    )
-  );
+  usuariosAdmin.push(new Admin(nombre, email, password, this.rol));
 
-  localStorage.setItem("panelAdmin", JSON.stringify(usuariosMedicos));
+  localStorage.setItem("usuariosAdmin", JSON.stringify(usuariosAdmin));
 
   document.getElementById("formulario").reset();
 
@@ -109,7 +81,7 @@ const registroMedico = () => {
   });
 
   setTimeout(() => {
-    location.replace("loginMedico.html");
+    location.replace("loginAdmin.html");
   }, 2500);
 };
 

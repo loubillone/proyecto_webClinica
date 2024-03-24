@@ -17,7 +17,7 @@ const inicioSesionMedico = () => {
 
   if (validarMedico) {
     if (validarMedico.password === password) {
-      localStorage.setItem("loginMedico", JSON.stringify(validarMedico));
+      localStorage.setItem("login", JSON.stringify(validarMedico));
       location.replace("/index.html");
     } else {
       alert("Su correo o contraseña es incorrecto, verifique sus credenciales");
