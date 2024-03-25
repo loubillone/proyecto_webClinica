@@ -49,7 +49,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu-lista">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html"
                   >Inicio</a
@@ -81,14 +81,25 @@
               </li>
             </ul>
 
-            <a href="./pages/cardsLogin.html"
+            <form class="d-flex" role="search" id="formulario-menu">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+            </form>
+            <!-- <a href="./pages/cardsLogin.html"
               ><button class="btn btn-secondary m-2 boton-navbar">
                 <i class="fa fa-user-circle-o" aria-hidden="true"></i></button
             ></a>
 
             <button class="btn btn-secondary boton-navbar">
               <i class="fa fa-sign-out" aria-hidden="true"></i>
-            </button>
+            </button> -->
           </div>
         </div>
       </nav>
@@ -147,9 +158,9 @@
       </section>
 
       <!--Cards Médicos-->
-      <section>
+      <!-- <section>
         <div class="container">
-          <!-- TABLA TURNOS (mover a pagian ver turnos)-->
+          TABLA TURNOS (mover a pagian ver turnos)
           <div class="row my-5">
             <div class="row" id="contenedor-tabla-turnos">
               <div class="col-12">
@@ -170,336 +181,336 @@
                   </div>
                 </div>
               </div>
-                        
             </div>
-            <!-- FIN TABLA TURNOS-->
-          <div class="row my-5" id="row-doctores">
-            <div
-              class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
-            >
-              <div class="card card-medicos">
-                <img
-                  src="./assets/img-cards-medicos/docAlvarez.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body text-center" id="cardMedicos">
-                  <h5 class="card-title">Dr. Pablo Alvarez</h5>
-                  <p class="card-text">Pediatra</p>
-                  <button
-                   href="./pages/formularioTurno.html"
-                    class="btn btn-primary boton-card btn-sacar-turno"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                    data-especialidad="pediatra"
-                    data-nombre="Dr. Pablo Alvarez"
-                  >
-                    Sacar turno
-                  </button>
-                </div>
+          </div>
+        </div>
+        FIN TABLA TURNOS
+        <div class="row my-5" id="row-doctores">
+          <div
+            class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
+          >
+            <div class="card card-medicos">
+              <img
+                src="./assets/img-cards-medicos/docAlvarez.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center" id="cardMedicos">
+                <h5 class="card-title">Dr. Pablo Alvarez</h5>
+                <p class="card-text">Pediatra</p>
+                <button
+                  href="./pages/formularioTurno.html"
+                  class="btn btn-primary boton-card btn-sacar-turno"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  data-especialidad="pediatra"
+                  data-nombre="Dr. Pablo Alvarez"
+                >
+                  Sacar turno
+                </button>
               </div>
             </div>
-            <div
-              class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
-            >
-              <div class="card card-medicos">
-                <img
-                  src="./assets/img-cards-medicos/docArevalo.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Dra. Martina Arévalo</h5>
-                  <p class="card-text">Cardiólogo</p>
-                  <button
-                   href="./pages/formularioTurno.html"
-                    class="btn btn-primary boton-card btn-sacar-turno"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                    data-especialidad="Cardiólogo"
-                    data-nombre="Dra. Martina Arévalo"
-                  >
-                    Sacar turno
-                  </button>
-                </div>
+          </div>
+          <div
+            class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
+          >
+            <div class="card card-medicos">
+              <img
+                src="./assets/img-cards-medicos/docArevalo.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Dra. Martina Arévalo</h5>
+                <p class="card-text">Cardiólogo</p>
+                <button
+                  href="./pages/formularioTurno.html"
+                  class="btn btn-primary boton-card btn-sacar-turno"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  data-especialidad="Cardiólogo"
+                  data-nombre="Dra. Martina Arévalo"
+                >
+                  Sacar turno
+                </button>
               </div>
             </div>
-            <div
-              class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
-            >
-              <div class="card card-medicos">
-                <img
-                  src="./assets/img-cards-medicos/docGomez.png"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Dr. Raúl Gómez</h5>
-                  <p class="card-text">Gastroenterologo</p>
-                  <button
-                   href="./pages/formularioTurno.html"
-                    class="btn btn-primary boton-card btn-sacar-turno"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                    data-especialidad="Gastroenterologo"
-                    data-nombre="Dr. Raúl Gómez"
-                  >
-                    Sacar turno
-                  </button>
-                </div>
+          </div>
+          <div
+            class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
+          >
+            <div class="card card-medicos">
+              <img
+                src="./assets/img-cards-medicos/docGomez.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Dr. Raúl Gómez</h5>
+                <p class="card-text">Gastroenterologo</p>
+                <button
+                  href="./pages/formularioTurno.html"
+                  class="btn btn-primary boton-card btn-sacar-turno"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  data-especialidad="Gastroenterologo"
+                  data-nombre="Dr. Raúl Gómez"
+                >
+                  Sacar turno
+                </button>
               </div>
             </div>
-            <div
-              class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
-            >
-              <div class="card card-medicos">
-                <img
-                  src="./assets/img-cards-medicos/docMartinez.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Dr. Manuel Martinez</h5>
-                  <p class="card-text">Oftalmologo</p>
-                  <button
-                   href="./pages/formularioTurno.html"
-                    class="btn btn-primary boton-card btn-sacar-turno"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                    data-especialidad="Oftalmologo"
-                    data-nombre="Dr. Manuel Martinez"
-                  >
-                    Sacar turno
-                  </button>
-                </div>
+          </div>
+          <div
+            class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
+          >
+            <div class="card card-medicos">
+              <img
+                src="./assets/img-cards-medicos/docMartinez.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Dr. Manuel Martinez</h5>
+                <p class="card-text">Oftalmologo</p>
+                <button
+                  href="./pages/formularioTurno.html"
+                  class="btn btn-primary boton-card btn-sacar-turno"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  data-especialidad="Oftalmologo"
+                  data-nombre="Dr. Manuel Martinez"
+                >
+                  Sacar turno
+                </button>
               </div>
             </div>
-            <div
-              class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
-            >
-              <div class="card card-medicos">
-                <img
-                  src="./assets/img-cards-medicos/docPerez.png"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Dr. Pablo Perez</h5>
-                  <p class="card-text">Urologo</p>
-                  <button
-                   href="./pages/formularioTurno.html"
-                    class="btn btn-primary boton-card btn-sacar-turno"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                    data-especialidad="urologo"
-                    data-nombre="Dr. Pablo Perez"
-                  >
-                    Sacar turno
-                  </button>
-                </div>
+          </div>
+          <div
+            class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
+          >
+            <div class="card card-medicos">
+              <img
+                src="./assets/img-cards-medicos/docPerez.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Dr. Pablo Perez</h5>
+                <p class="card-text">Urologo</p>
+                <button
+                  href="./pages/formularioTurno.html"
+                  class="btn btn-primary boton-card btn-sacar-turno"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  data-especialidad="urologo"
+                  data-nombre="Dr. Pablo Perez"
+                >
+                  Sacar turno
+                </button>
               </div>
             </div>
-            <div
-              class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
-            >
-              <div class="card card-medicos">
-                <img
-                  src="./assets/img-cards-medicos/docAlvarez.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Dr. Pablo Alvarez</h5>
-                  <p class="card-text">Pediatra</p>
-                  <button
-                   href="./pages/formularioTurno.html"
-                    class="btn btn-primary boton-card btn-sacar-turno"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                    data-especialidad="pediatra"
-                    data-nombre="Dr. Pablo Alvarez"
-                  >
-                    Sacar turno
-                  </button>
-                </div>
+          </div>
+          <div
+            class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
+          >
+            <div class="card card-medicos">
+              <img
+                src="./assets/img-cards-medicos/docAlvarez.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Dr. Pablo Alvarez</h5>
+                <p class="card-text">Pediatra</p>
+                <button
+                  href="./pages/formularioTurno.html"
+                  class="btn btn-primary boton-card btn-sacar-turno"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  data-especialidad="pediatra"
+                  data-nombre="Dr. Pablo Alvarez"
+                >
+                  Sacar turno
+                </button>
               </div>
             </div>
-            <div
-              class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
-            >
-              <div class="card card-medicos">
-                <img
-                  src="./assets/img-cards-medicos/docAlvarez.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Dr. Pablo Alvarez</h5>
-                  <p class="card-text">Pediatra</p>
-                  <button
-                   href="./pages/formularioTurno.html"
-                    class="btn btn-primary boton-card btn-sacar-turno"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                    data-especialidad="pediatra"
-                    data-nombre="Dr. Pablo Alvarez"
-                  >
-                    Sacar turno
-                  </button>
-                </div>
+          </div>
+          <div
+            class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
+          >
+            <div class="card card-medicos">
+              <img
+                src="./assets/img-cards-medicos/docAlvarez.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Dr. Pablo Alvarez</h5>
+                <p class="card-text">Pediatra</p>
+                <button
+                  href="./pages/formularioTurno.html"
+                  class="btn btn-primary boton-card btn-sacar-turno"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  data-especialidad="pediatra"
+                  data-nombre="Dr. Pablo Alvarez"
+                >
+                  Sacar turno
+                </button>
               </div>
             </div>
-            <div
-              class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
-            >
-              <div class="card card-medicos">
-                <img
-                  src="./assets/img-cards-medicos/docAlvarez.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Dr. Pablo Alvarez</h5>
-                  <p class="card-text">Pediatra</p>
-                  <button
-                   href="./pages/formularioTurno.html"
-                    class="btn btn-primary boton-card btn-sacar-turno"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                    data-especialidad="pediatra"
-                    data-nombre="Dr. Pablo Alvarez"
-                  >
-                    Sacar turno
-                  </button>
-                </div>
+          </div>
+          <div
+            class="col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3"
+          >
+            <div class="card card-medicos">
+              <img
+                src="./assets/img-cards-medicos/docAlvarez.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Dr. Pablo Alvarez</h5>
+                <p class="card-text">Pediatra</p>
+                <button
+                  href="./pages/formularioTurno.html"
+                  class="btn btn-primary boton-card btn-sacar-turno"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  data-especialidad="pediatra"
+                  data-nombre="Dr. Pablo Alvarez"
+                >
+                  Sacar turno
+                </button>
               </div>
             </div>
+          </div>
 
-            <!-- INICIO MODAL OLVIDASTE CONTRASEÑA -->
-            <form action="./error404.html">
-              <div
-                class="modal fade text-center"
-                id="exampleModal"
-                tabindex="-1"
-                data-bs-backdrop="static"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content bg-dark text-white">
-                    <div class="modal-header contenedor-modal">
-                      <h1
-                        class="modal-title fs-5 mt-1 pb-2 ps-5 ms-3 pe-4"
-                        id="exampleModalLabel"
-                      >
-                        Por favor complete la ficha de Turno.
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close bg-white"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <p class="p-modal">
-                        Ingrese el motivo de su consulta, el dia y el horario.
-                      </p>
-                      <label
-                        for="exampleInputEmail1"
-                        class="form-label text-white"
-                        >Motivo de Consulta:
-                      </label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Ingrese el motivo de la consulta"
-                        id="input-motivo"
-                        aria-describedby="emailHelp"
-                        required
-                        minlength="5"
-                        maxlength="40"
-                      />
-                      <label
-                        for="exampleInputEmail1"
-                        class="form-label text-white"
-                        >Profesional.
-                      </label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Correo Electrónico, teléfono o usuario"
-                        id="input-dr"
-                        aria-describedby="emailHelp"
-                        required
-                        minlength="5"
-                        maxlength="40"
-                        value="Dr. Pablo Alvarez"
-                      />
-                      <label
-                        for="exampleInputEmail1"
-                        class="form-label text-white"
-                        >Especialidad.
-                      </label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Correo Electrónico, teléfono o usuario"
-                        id="input-especialidad"
-                        aria-describedby="emailHelp"
-                        required
-                        minlength="5"
-                        maxlength="40"
-                        value="Pediatra"
-                      />
-                      <label
-                        for="exampleInputEmail1"
-                        class="form-label text-white"
-                        >Fecha.
-                      </label>
-                      <input
-                        type="date"
-                        class="form-control"
-                        placeholder="Correo Electrónico, teléfono o usuario"
-                        id="input-fecha"
-                        aria-describedby="emailHelp"
-                        required
-                        minlength="5"
-                        maxlength="40"
-                      />
-                      <label
-                        for="exampleInputEmail1"
-                        class="form-label text-white"
-                        >Hora.
-                      </label>
-                      <input
-                        type="time"
-                        class="form-control"
-                        placeholder="Correo Electrónico, teléfono o usuario"
-                        id="input-hora"
-                        aria-describedby="emailHelp"
-                        required
-                        min="08:00"
-                        max="20:00"
-                      />
-                    </div>
-                    <div class="modal-footer">
-                      <input
-                        type="submit"
-                        href="#"
-                        class="btn btn-success"
-                        value="Click para registrar turno"
-                        id="sacar-turno"
-                      />
-                    </div>
+          INICIO MODAL OLVIDASTE CONTRASEÑA
+          <form action="./error404.html">
+            <div
+              class="modal fade text-center"
+              id="exampleModal"
+              tabindex="-1"
+              data-bs-backdrop="static"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content bg-dark text-white">
+                  <div class="modal-header contenedor-modal">
+                    <h1
+                      class="modal-title fs-5 mt-1 pb-2 ps-5 ms-3 pe-4"
+                      id="exampleModalLabel"
+                    >
+                      Por favor complete la ficha de Turno.
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close bg-white"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="p-modal">
+                      Ingrese el motivo de su consulta, el dia y el horario.
+                    </p>
+                    <label
+                      for="exampleInputEmail1"
+                      class="form-label text-white"
+                      >Motivo de Consulta:
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Ingrese el motivo de la consulta"
+                      id="input-motivo"
+                      aria-describedby="emailHelp"
+                      required
+                      minlength="5"
+                      maxlength="40"
+                    />
+                    <label
+                      for="exampleInputEmail1"
+                      class="form-label text-white"
+                      >Profesional.
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Correo Electrónico, teléfono o usuario"
+                      id="input-dr"
+                      aria-describedby="emailHelp"
+                      required
+                      minlength="5"
+                      maxlength="40"
+                      value="Dr. Pablo Alvarez"
+                    />
+                    <label
+                      for="exampleInputEmail1"
+                      class="form-label text-white"
+                      >Especialidad.
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Correo Electrónico, teléfono o usuario"
+                      id="input-especialidad"
+                      aria-describedby="emailHelp"
+                      required
+                      minlength="5"
+                      maxlength="40"
+                      value="Pediatra"
+                    />
+                    <label
+                      for="exampleInputEmail1"
+                      class="form-label text-white"
+                      >Fecha.
+                    </label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      placeholder="Correo Electrónico, teléfono o usuario"
+                      id="input-fecha"
+                      aria-describedby="emailHelp"
+                      required
+                      minlength="5"
+                      maxlength="40"
+                    />
+                    <label
+                      for="exampleInputEmail1"
+                      class="form-label text-white"
+                      >Hora.
+                    </label>
+                    <input
+                      type="time"
+                      class="form-control"
+                      placeholder="Correo Electrónico, teléfono o usuario"
+                      id="input-hora"
+                      aria-describedby="emailHelp"
+                      required
+                      min="08:00"
+                      max="20:00"
+                    />
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="submit"
+                      href="#"
+                      class="btn btn-success"
+                      value="Click para registrar turno"
+                      id="sacar-turno"
+                    />
                   </div>
                 </div>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </section>
-
+    -->
       <!--Mapa-->
       <!-- <section class="my-5">
         <div class="container">
@@ -561,29 +572,18 @@
       </div>
     </footer>
 
-        <!--Bootstrap-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
 
-        <!--Fontawesome-->
-        <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
-        <script src="/proyecto_webClinica/js/sistemaTurnos.js"></script>
-    
-        <script>
-          document.addEventListener("DOMContentLoaded", function() {
-              if ( localStorage.getItem("login")) {
-                  const datosUsuario = JSON.parse(localStorage.getItem("login"));
-                  console.log("datosUsuario",datosUsuario)
-                  if (datosUsuario.rol === "medico") {
-                      document.getElementById("contenedor-tabla-turnos").style.display = "table";
-                      document.getElementById("row-doctores").style.display = "none";
-                  } else {
-                      document.getElementById("contenedor-tabla-turnos").style.display = "none";
-                      document.getElementById("row-doctores").style.display = "";
-                  }
-              } else {
-                  console.log("No se encontraron datos de usuario en localStorage.");
-              }
-          });
-          </script>
+    <!--Fontawesome-->
+    <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
+
+    <!--Javascript-->
+
+    <script src="./js/index.js"></script>
   </body>
 </html>

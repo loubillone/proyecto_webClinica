@@ -1,4 +1,5 @@
-let usuariosMedicos = JSON.parse(localStorage.getItem("panelAdmin")) || [];
+let usuariosMedicos =
+  JSON.parse(localStorage.getItem("usuariosAprobados")) || [];
 let formularioPaciente = document.getElementById("formularioMedico");
 
 const handleSubmit = (e) => {
@@ -16,9 +17,9 @@ const inicioSesionMedico = () => {
   });
 
   if (validarMedico) {
-    if (validarMedico.password === password) {
+    if (validarMedico.password === password && validarMedico.rol === "medico") {
       localStorage.setItem("login", JSON.stringify(validarMedico));
-      location.replace("/proyecto_webClinica/index.html");
+      location.replace("/index.html");
     } else {
       alert("Su correo o contraseña es incorrecto, verifique sus credenciales");
     }
