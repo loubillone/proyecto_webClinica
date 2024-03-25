@@ -17,8 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/cardsMedicos.css" />
+    <link rel="stylesheet" href="../css/index.css" />
     <title>Web Clínica || Página Principal</title>
   </head>
 
@@ -27,9 +26,9 @@
       <!--Menú-->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand" href="../index.html"
             ><img
-              src="./assets/img_index/medical-calendar-icon-free-vector.png"
+              src="../assets/img_index/medical-calendar-icon-free-vector.png"
               class="leona"
               alt="logo clinica"
               width="50px"
@@ -51,12 +50,15 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/sobreNosotros.html"
+                <a class="nav-link" href="./sobreNosotros.html"
                   >Sobre nosotros</a
                 >
               </li>
@@ -85,15 +87,25 @@
                 >
               </li>
             </ul>
-
-            <a href="./pages/cardsLogin.html"
+            <form class="d-flex" role="search" id="formulario-menu">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+            </form>
+            <!-- <a href="./pages/cardsLogin.html"
               ><button class="btn btn-secondary m-2 boton-navbar">
                 <i class="fa fa-user-circle-o" aria-hidden="true"></i></button
             ></a>
 
             <button class="btn btn-secondary boton-navbar">
               <i class="fa fa-sign-out" aria-hidden="true"></i>
-            </button>
+            </button> -->
           </div>
         </div>
       </nav>
@@ -108,5 +120,7 @@
 
     <!--Fontawesome-->
     <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
+
+    <script src="../js/panelAdmin.js"></script>
   </body>
 </html>
