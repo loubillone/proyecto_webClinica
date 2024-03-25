@@ -1,4 +1,4 @@
-let usuariosMedicos = JSON.parse(localStorage.getItem("usuariosMedicos")) || [];
+let usuariosMedicos = JSON.parse(localStorage.getItem("panelAdmin")) || [];
 let formularioPaciente = document.getElementById("formularioMedico");
 
 const handleSubmit = (e) => {
@@ -18,7 +18,7 @@ const inicioSesionMedico = () => {
   if (validarMedico) {
     if (validarMedico.password === password) {
       localStorage.setItem("login", JSON.stringify(validarMedico));
-      location.replace("/index.html");
+      location.replace("/proyecto_webClinica/index.html");
     } else {
       alert("Su correo o contraseña es incorrecto, verifique sus credenciales");
     }

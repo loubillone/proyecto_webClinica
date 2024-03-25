@@ -8,7 +8,9 @@ body {
     #000000 100%
   );
 }
-
+.modal-dialog{
+  transition: none !important;
+}
 /*Menú */
 .navbar {
   background-image: radial-gradient(
