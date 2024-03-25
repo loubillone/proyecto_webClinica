@@ -1,5 +1,5 @@
 let usuariosPaciente =
-  JSON.parse(localStorage.getItem("usuariosPaciente")) || [];
+  JSON.parse(localStorage.getItem("usuariosAprobados")) || [];
 let formularioPaciente = document.getElementById("formularioPaciente");
 
 const handleSubmit = (e) => {
@@ -22,7 +22,7 @@ const inicioSesionPaciente = () => {
       validarPaciente.rol === "paciente"
     ) {
       localStorage.setItem("login", JSON.stringify(validarPaciente));
-      location.replace("/proyecto_webClinica/index.html");
+      location.replace("/index.html");
     } else {
       alert("Su correo o contraseña es incorrecto, verifique sus credenciales");
     }

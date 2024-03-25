@@ -17,8 +17,6 @@ const mensajebienvenida = () => {
   containerMensaje.appendChild(h1);
 };
 
-mensajebienvenida();
-
 //CERRAR SESIÓN
 if (usuarioLogueado) {
   let boton = document.createElement("button");
@@ -125,5 +123,7 @@ const mostrarTablaAprobados = () => {
     });
   }
 };
+
+mensajebienvenida();
 mostrarTablaPendientes();
 mostrarTablaAprobados();
