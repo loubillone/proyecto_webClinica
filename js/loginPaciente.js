@@ -22,7 +22,7 @@ const inicioSesionPaciente = () => {
       validarPaciente.rol === "paciente"
     ) {
       localStorage.setItem("login", JSON.stringify(validarPaciente));
-      location.replace("/index.html");
+      location.replace("/proyecto_webClinica/index.html");
     } else {
       alert("Su correo o contraseña es incorrecto, verifique sus credenciales");
     }
