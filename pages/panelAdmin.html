@@ -112,11 +112,74 @@
     </header>
 
     <main>
-      <div class="container">
-        <div class="row">
-          <div class="col" id="mensajeBienvenida"></div>
+      <!--MENSAJE DE BIENVENIDA-->
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col" id="mensajeBienvenida"></div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!--PANEL ADMIN DE USUARIOS-->
+
+      <section>
+        <!--TITULO-->
+        <div class="container">
+          <div class="row text-center my-5">
+            <div class="col">
+              <h2>Panel de usuarios estado "pendiente"</h2>
+            </div>
+          </div>
+        </div>
+        <!--TABLA USUARIOS PENDIENTES-->
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Número</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Aceptar</th>
+                    <th scope="col">Rechazar</th>
+                  </tr>
+                </thead>
+                <tbody id="cuerpo-tabla_pend"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!--TITULO-->
+        <div class="container">
+          <div class="row text-center my-5">
+            <div class="col">
+              <h2>Panel de usuarios estado "aprobados"</h2>
+            </div>
+          </div>
+        </div>
+        <!--TABLA USUARIOS APROBADOS-->
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Estado</th>
+                  </tr>
+                </thead>
+                <tbody id="cuerpo-tabla_aprob"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!--Bootstrap-->
     <script

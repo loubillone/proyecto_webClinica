@@ -3,7 +3,7 @@ let formulario = document.getElementById("formulario");
 
 class Paciente {
   constructor(
-    nombreCompleto,
+    nombre,
     fechaNac,
     email,
     contraseña,
@@ -11,7 +11,7 @@ class Paciente {
     obraSocial,
     rol = "paciente"
   ) {
-    this.nombreCompleto = nombreCompleto;
+    this.nombre = nombre;
     this.fechaNac = fechaNac;
     this.email = email;
     this.contraseña = contraseña;
@@ -26,7 +26,7 @@ const handleSubmit = (e) => {
 };
 
 const validarPaciente = () => {
-  let nombreCompleto = document.getElementById("nombreCompleto").value;
+  let nombre = document.getElementById("nombreCompleto").value;
   let fechaNac = document.getElementById("fechNac").value;
   let email = document.getElementById("email").value;
   let contraseña = document.getElementById("contraseña").value;
@@ -63,7 +63,7 @@ const validarPaciente = () => {
 
   usuariosPaciente.push(
     new Paciente(
-      nombreCompleto,
+      nombre,
       fechaNac,
       email,
       contraseña,
