@@ -26,12 +26,12 @@ const handleSubmit = (e) => {
 };
 
 const validarPaciente = () => {
-  let nombre = document.getElementById("nombreCompleto").value;
+  let nombre = document.getElementById("nombreCompleto").value.toUpperCase();
   let fechaNac = document.getElementById("fechNac").value;
   let email = document.getElementById("email").value;
   let contraseña = document.getElementById("contraseña").value;
-  let genero = document.getElementById("genero").value;
-  let obraSocial = document.getElementById("obraSocial").value;
+  let genero = document.getElementById("genero").value.toLowerCase();
+  let obraSocial = document.getElementById("obraSocial").value.toLowerCase();
   let confPass = document.getElementById("confPass").value;
 
   if (contraseña != confPass) {

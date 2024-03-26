@@ -30,10 +30,12 @@ const handleSubmit = (e) => {
 };
 
 const registroMedico = () => {
-  let nombre = document.getElementById("nombre").value;
-  let especialidad = document.getElementById("especialidad").value;
-  let email = document.getElementById("email").value;
-  let dia = document.getElementById("dia").value;
+  let nombre = document.getElementById("nombre").value.toUpperCase();
+  let especialidad = document
+    .getElementById("especialidad")
+    .value.toLowerCase();
+  let email = document.getElementById("email").value.toLowerCase();
+  let dia = document.getElementById("dia").value.toLowerCase();
   let horario = document.getElementById("horario").value;
   let password = document.getElementById("password").value;
   let confPass = document.getElementById("confPass").value;
@@ -103,13 +105,13 @@ const registroMedico = () => {
   Swal.fire({
     position: "center",
     icon: "success",
-    title: "Usuario registrado con éxito",
+    title: "Le enviamos un mail para continuar con su proceso de registro",
     showConfirmButton: false,
-    timer: 2000,
+    timer: 3500,
   });
 
   setTimeout(() => {
-    location.replace("loginMedico.html");
+    location.replace("/index.html");
   }, 2500);
 };
 

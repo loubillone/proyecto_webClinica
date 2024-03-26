@@ -85,6 +85,7 @@ const aceptarUsuario = (index) => {
 
     alert("Usuario aprobado");
     mostrarTablaPendientes();
+    mostrarTablaAprobados();
   }
 };
 
