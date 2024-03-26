@@ -16,6 +16,28 @@ if (usuarioLogueado) {
     contenedorLista.appendChild(item);
   }
 }
+//Cuando se loguea paciente se añade al navbar el item de panel paciente
+if (usuarioLogueado) {
+  if (usuarioLogueado.rol === "paciente") {
+    let item = document.createElement("li");
+    item.classList = "nav-item";
+    let contenidoItem = `<a class="nav-link" aria-current="page" href="../pages/panelTurnosPacientes.html"
+    >Panel turnos paciente</a`;
+    item.innerHTML = contenidoItem;
+    contenedorLista.appendChild(item);
+  }
+}
+//Cuando se loguea medico se añade al navbar el item de panel medico
+if (usuarioLogueado) {
+  if (usuarioLogueado.rol === "medico") {
+    let item = document.createElement("li");
+    item.classList = "nav-item";
+    let contenidoItem = `<a class="nav-link" aria-current="page" href="../pages/panelTurnosMedicos.html"
+    >Panel turnos médico</a`;
+    item.innerHTML = contenidoItem;
+    contenedorLista.appendChild(item);
+  }
+}
 
 //CERRAR SESIÓN
 if (usuarioLogueado) {
@@ -159,29 +181,43 @@ const crearCuerpoModal = (index) => {
       required
       value="${medicos[index].especialidad}"
     />
-    <label for="exampleInputEmail1" class="form-label text-white"
-      >Fecha.
-    </label>
-    <input
-      type="text"
-      class="form-control"
-     value="${medicos[index].dia}"
-      id="dia"
-      aria-describedby="emailHelp"
-      required
-      minlength="5"
-      maxlength="40"
-    />
-    <label for="exampleInputEmail1" class="form-label text-white">Hora. </label>
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Correo Electrónico, teléfono o usuario"
-      id="horario"
-      aria-describedby="emailHelp"
-      required
-      value="${medicos[index].horario}"
-    />
+
+    <label
+                for="exampleInputEmail1"
+                class="form-label text-white textosombra"
+                >Hora
+              </label>
+              <select
+                class="form-select"
+                id="dia"
+                name="hora"
+                aria-label="Default select example"
+              >
+                <option selected>Seleccione dia</option>
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miercoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+              </select>
+
+    <label
+                for="exampleInputEmail1"
+                class="form-label text-white textosombra"
+                >Hora
+              </label>
+              <select
+                class="form-select"
+                id="hora"
+                name="hora"
+                aria-label="Default select example"
+              >
+                <option selected>Seleccione su hora</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+              </select>
   </div>
   <div class="modal-footer">
     <input
@@ -218,7 +254,7 @@ const guardarTurno = (e) => {
   let nombreMedico = document.getElementById("nombre-medico").value;
   let especialidad = document.getElementById("especialidad").value;
   let dia = document.getElementById("dia").value;
-  let horario = document.getElementById("horario").value;
+  let horario = document.getElementById("hora").value;
 
   turnos.push(
     new Turno(paciente, consulta, nombreMedico, especialidad, dia, horario)

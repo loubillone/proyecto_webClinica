@@ -16,19 +16,18 @@ const mostrarTurnos = () => {
   containerTabla.innerHTML = "";
   if (usuarioLogueado.rol === "paciente") {
     if (turnos.length > 0) {
-      console.log(turnos);
       turnos.map((turno, index) => {
-        let tr = document.createElement("tr");
-        let celda = `<th scope="row">${index + 1}</th>
-            
-            <td>${turno.nombreMedico}</td>
-            <td>${turno.dia}</td>
-            <td>${turno.horario}</td>
-            <td><button class="btn btn-warning btn-sm" onclick = "aceptarUsuario(${index})"><i class="fa fa-check-square-o" aria-hidden="true"></i></button></td>
-            <td><button class="btn btn-danger btn-sm"  onclick = "rechazarUsuario(${index})"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>`;
+        if (turno.paciente === usuarioLogueado.nombre) {
+          let tr = document.createElement("tr");
+          let celda = `<th scope="row">${index + 1}</th>
+                
+                <td>${turno.nombreMedico}</td>
+                <td>${turno.dia}</td>
+                <td>${turno.horario}</td>`;
 
-        tr.innerHTML = celda;
-        containerTabla.appendChild(tr);
+          tr.innerHTML = celda;
+          containerTabla.appendChild(tr);
+        }
       });
     }
   }

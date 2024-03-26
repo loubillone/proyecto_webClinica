@@ -35,7 +35,11 @@ const validarPaciente = () => {
   let confPass = document.getElementById("confPass").value;
 
   if (contraseña != confPass) {
-    return alert("Las contraseñas no coinciden");
+    return Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "El Correo ingresado ya esta registrado",
+    });
   }
   const validarEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const resultadoValidacion = validarEmail.test(email);
@@ -80,13 +84,13 @@ const validarPaciente = () => {
   Swal.fire({
     position: "center",
     icon: "success",
-    title: "Usuario registrado con éxito",
+    title: "Le enviamos un mail para continuar con su proceso de registro",
     showConfirmButton: false,
-    timer: 2000,
+    timer: 3500,
   });
 
   setTimeout(() => {
-    location.replace("loginPaciente.html");
+    location.replace("/index.html");
   }, 2500);
 };
 formulario.addEventListener("submit", handleSubmit);

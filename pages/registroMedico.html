@@ -55,6 +55,7 @@
                 placeholder="Ingrese su Nombre y Apellido"
                 id="nombre"
                 required
+                autocomplete="off"
               />
             </div>
 
@@ -72,7 +73,46 @@
                 placeholder="Ingrese su Especialidad"
                 id="especialidad"
                 required
+                autocomplete="off"
               />
+            </div>
+            <!-- HORARIO DE ATENCIÓN -->
+            <div>
+              <label
+                for="exampleModalLabel"
+                class="form-label text-white textosombra"
+                >Hora
+              </label>
+              <select
+                class="form-select"
+                id="hora"
+                name="hora"
+                aria-label="Default select example"
+              >
+                <option selected>Seleccione su hora</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+              </select>
+            </div>
+
+            <!-- DIA DE ATENCIÓN -->
+            <div>
+              <label class="form-label text-white textosombra">Hora </label>
+              <select
+                class="form-select"
+                id="dia"
+                name="dia"
+                aria-label="Default select example"
+              >
+                <option selected>Seleccione su día</option>
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miercoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+              </select>
             </div>
 
             <!-- DIA DE ATENCIÓN -->
@@ -118,6 +158,7 @@
               id="imagen"
               class="form-control"
               placeholder="Inserte url de la imagen"
+              autocomplete="off"
             />
             <!-- INGRESA TU EMAIL -->
             <div class="my-4">
@@ -133,6 +174,7 @@
                 id="email"
                 aria-describedby="emailHelp"
                 required
+                autocomplete="off"
               />
               <div id="emailHelp" class="form-text text-white">
                 Nunca compartiremos tu email con terceros.

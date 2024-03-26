@@ -23,9 +23,7 @@ const mostrarTurnos = () => {
               
               <td>${turno.paciente}</td>
               <td>${turno.dia}</td>
-              <td>${turno.horario}</td>
-              <td><button class="btn btn-warning btn-sm" onclick = "aceptarUsuario(${index})"><i class="fa fa-check-square-o" aria-hidden="true"></i></button></td>
-              <td><button class="btn btn-danger btn-sm"  onclick = "rechazarUsuario(${index})"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>`;
+              <td>${turno.horario}</td>`;
 
           tr.innerHTML = celda;
           containerTabla.appendChild(tr);

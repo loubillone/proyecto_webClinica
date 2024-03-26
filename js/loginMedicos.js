@@ -21,10 +21,18 @@ const inicioSesionMedico = () => {
       localStorage.setItem("login", JSON.stringify(validarMedico));
       location.replace("/index.html");
     } else {
-      alert("Su correo o contraseña es incorrecto, verifique sus credenciales");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Su correo o contraseña es incorrecto, verifique sus credenciales",
+      });
     }
   } else {
-    alert("Su correo o contraseña es incorrecto, verifique sus credenciales");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Su correo o contraseña es incorrecto, verifique sus credenciales",
+    });
   }
 };
 
