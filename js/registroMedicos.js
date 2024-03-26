@@ -6,8 +6,8 @@ class Medico {
     nombre,
     especialidad,
     email,
-    dia,
-    horario,
+    dia = "lunes",
+    horario = "17",
     password,
     imagen,
     rol = "medico"
@@ -35,8 +35,8 @@ const registroMedico = () => {
     .getElementById("especialidad")
     .value.toLowerCase();
   let email = document.getElementById("email").value.toLowerCase();
-  let dia = document.getElementById("dia").value.toLowerCase();
-  let horario = document.getElementById("horario").value;
+  // let dia = document.getElementById("dia").value.toLowerCase();
+  // let horario = document.getElementById("horario").value;
   let password = document.getElementById("password").value;
   let confPass = document.getElementById("confPass").value;
   let imagen = document.getElementById("imagen").value;
@@ -90,8 +90,8 @@ const registroMedico = () => {
       nombre,
       especialidad,
       email,
-      dia,
-      horario,
+      this.dia,
+      this.horario,
       password,
       imagen,
       this.rol
