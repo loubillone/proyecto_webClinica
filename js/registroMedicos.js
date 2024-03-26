@@ -36,7 +36,7 @@ const registroMedico = () => {
     .value.toLowerCase();
   let email = document.getElementById("email").value.toLowerCase();
   let dia = document.getElementById("dia").value.toLowerCase();
-  let horario = document.getElementById("horario").value;
+  let horario = document.getElementById("hora").value;
   let password = document.getElementById("password").value;
   let confPass = document.getElementById("confPass").value;
   let imagen = document.getElementById("imagen").value;

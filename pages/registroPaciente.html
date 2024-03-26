@@ -57,6 +57,7 @@
                 required
                 minlength="3"
                 maxlength="30"
+                autocomplete="off"
               />
             </div>
 
@@ -94,14 +95,52 @@
                 required
                 minlength="5"
                 maxlength="40"
+                autocomplete="off"
               />
               <div id="emailHelp" class="form-text text-white">
                 Nunca compartiremos tu email con terceros.
               </div>
             </div>
 
-            <!-- INICIA NUEVO  MODELO DE PASSWORD -->
-            <div class="row g-3 align-items-center">
+            <!-- SELECCIONA TU GENERO -->
+            <div class="my-4">
+              <label for="genero" class="form-label text-white textosombra"
+                >Género</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ingrese su Género"
+                id="genero"
+                required
+                minlength="4"
+                maxlength="48"
+                autocomplete="off"
+              />
+            </div>
+
+            <!-- INGRESE SU OBRA SOCIAL -->
+            <div class="my-4">
+              <label
+                for="exampleModalLabel"
+                class="form-label text-white textosombra"
+                >Obra Social
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ingrese su Obra Social"
+                id="obraSocial"
+                required
+                minlength="4"
+                maxlength="48"
+                autocomplete="off"
+              />
+            </div>
+
+            <!--CONTRASEÑA-->
+
+            <div class="row g-3 align-items-center mb-4">
               <div class="col-auto">
                 <label
                   for="inputPassword6"
@@ -129,61 +168,46 @@
                   Debe tener entre 8 y 20 carácteres.
                 </span>
               </div>
-            </div>
-            <!-- FIN DEL NUEVO MODELO -->
 
-            <!-- CODIGO TRADICIONAL DE PASSWORD -->
-            <div class="my-4">
-              <label
-                for="exampleInputPassword1"
-                class="form-label text-white textosombra"
-                >Repetir contraseña</label
-              >
-              <input
-                type="password"
-                class="form-control mb-3"
-                placeholder="Repetir contraseña"
-                id="confPass"
-                required
-                minlength="8"
-                maxlength="22"
-              />
-            </div>
-
-            <!-- SELECCIONA TU GENERO -->
-            <div class="my-4">
-              <label for="genero" class="form-label text-white textosombra"
-                >Género</label>
+              <div class="col-auto">
+                <label
+                  for="inputPassword6"
+                  class="col-form-label text-white textosombra"
+                  >Confirmar contraseña</label
+                >
+              </div>
+              <div class="col-auto">
                 <input
-                type="text"
-                class="form-control"
-                placeholder="Ingrese su Género"
-                id="genero"
-                required
-                minlength="4"
-                maxlength="48"
-              />
-               
-            
+                  type="password"
+                  id="confPass"
+                  class="form-control"
+                  aria-describedby="passwordHelpInline"
+                  placeholder="Confirmar contraseña"
+                  required
+                  minlength="8"
+                  maxlength="22"
+                />
+              </div>
             </div>
 
-            <!-- INGRESE SU OBRA SOCIAL -->
-            <div class="my-4">
-              <label
-                for="exampleModalLabel"
-                class="form-label text-white textosombra"
-                >Obra Social
-              </label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Ingrese su Obra Social"
-                id="obraSocial"
-                required
-                minlength="4"
-                maxlength="48"
-              />
-            </div>
+            <!-- <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label
+                  for="exampleInputPassword1"
+                  class="form-label text-white textosombra"
+                  >Repetir contraseña</label
+                >
+                <input
+                  type="password"
+                  class="form-control mb-3"
+                  placeholder="Repetir contraseña"
+                  id="confPass"
+                  required
+                  minlength="8"
+                  maxlength="22"
+                />
+              </div>
+            </div> -->
 
             <input
               type="submit"
@@ -202,11 +226,10 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-  <!--SweetAlert-->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <!--Javascript-->
-  <script src="../js/registroPacientes.js"></script>
-
+    <!--Javascript-->
+    <script src="../js/registroPacientes.js"></script>
   </body>
 </html>
