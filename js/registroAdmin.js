@@ -17,8 +17,8 @@ const handleSubmit = (e) => {
 };
 
 const registroAdmin = () => {
-  let nombre = document.getElementById("nombre").value;
-  let email = document.getElementById("email").value;
+  let nombre = document.getElementById("nombre").value.toUpperCase();
+  let email = document.getElementById("email").value.toLowerCase();
   let password = document.getElementById("password").value;
   let confPass = document.getElementById("confPass").value;
 

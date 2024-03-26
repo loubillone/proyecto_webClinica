@@ -1,6 +1,8 @@
 let usuarioLogueado = JSON.parse(localStorage.getItem("login")) || null;
+let medicos = JSON.parse(localStorage.getItem("usuariosAprobados")) || [];
 let contenedorLista = document.getElementById("menu-lista");
 let formMenu = document.getElementById("formulario-menu");
+let contenedorCards = document.getElementById("containerCards");
 
 //Cuando se loguea admin se añade al navbar el item de Administración
 if (usuarioLogueado) {
@@ -60,3 +62,39 @@ if (!usuarioLogueado) {
     .getElementById("boton-iniciarSesion")
     .addEventListener("click", iniciarSesion);
 }
+
+//CARD MÉDICO
+
+const mostrarCards = () => {
+  contenedorCards.innerHTML = "";
+
+  medicos.forEach((medico) => {
+    if (medico.rol === "medico") {
+      let div = document.createElement("div");
+      div.classList = `col-10 offset-1 col-sm-6 offset-sm-0 col-md-4 offset-md-0 col-lg-3 offset-lg-0 my-3`;
+      let card = `<div class="card card-medicos">
+      <img
+        src="${medico.imagen}"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body text-center" id="cardMedicos">
+        <h5 class="card-title">${medico.nombre}</h5>
+        <p class="card-text">${medico.especialidad}</p>
+        <button
+          href="./pages/formularioTurno.html"
+          class="btn btn-primary boton-card btn-sacar-turno"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          data-especialidad="pediatra"
+          data-nombre="Dr. Pablo Alvarez"
+        >
+          Sacar turno
+        </button>
+      </div>`;
+      div.innerHTML = card;
+      contenedorCards.appendChild(div);
+    }
+  });
+};
+mostrarCards();
